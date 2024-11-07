@@ -1,11 +1,8 @@
 provider "azurerm" {
   features {}
-  #FDPO
-  #subscription_id = "18bf3718-f695-4c96-8d45-72dc2e617d2e"
-  #tenant_id       = "16b3c013-d300-468d-ac64-7eda0820b6d3"
-  #CONTOSO
-  subscription_id = "91a55dfc-a220-457b-8693-6db28856f90e"
-  tenant_id       = "79d0818e-590d-4a56-9fb3-0a0ceff46b0f"
+  subscription_id = ""
+  tenant_id       = ""
+
 }
 
 #variable "tenant_id" {
@@ -112,7 +109,7 @@ resource "azurerm_data_protection_backup_vault" "backup_vault" {
   }
 }
 
-
+#Seccion para habilitar la extesión de BK en el AKS - presenta fallas
 #resource "azurerm_kubernetes_cluster_extension" "backup_extension" {
 #  name                    = "aks-backup-extension"
 #  cluster_id              = azurerm_kubernetes_cluster.aks.id
